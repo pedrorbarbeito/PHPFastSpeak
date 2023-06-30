@@ -1,0 +1,206 @@
+controllers:
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
+
+app_usuario_perfil:
+  path: /api/usuario/perfil
+  methods: GET
+  controller: App\Controller\UsuarioController::perfil
+
+app_usuario_listar:
+  path: /api/usuario/list
+  methods: GET
+  controller: App\Controller\UsuarioController::listar
+
+app_usuario_guardar:
+  path: /api/usuario/save
+  methods: POST
+  controller: App\Controller\UsuarioController::guardar
+
+app_usuario_borrar:
+  path: /api/usuario/delete
+  methods: GET
+  controller: App\Controller\UsuarioController::eliminar
+
+
+app_user_editarperfil:
+    path: /api/usuario/editarPerfil
+    methods: PUT
+    controller: App\Controller\UsuarioController::editarPerfil
+
+app_usuario_buscarUsuario:
+  path: /api/usuario/buscarUsuario
+  methods: PUT
+  controller: App\Controller\UsuarioController::buscarPorUsuario
+
+app_usuario_logueado:
+  path: /api/usuario/logueado
+  methods: GET
+  controller: App\Controller\UsuarioController::usuarioLogueado
+
+app_login:
+  path: /api/login
+  controller: App\Controller\LoginController::login
+
+app_mensaje_listar:
+  path: /api/mensaje/crear
+  methods: GET
+  controller: App\Controller\MensajeController::listar
+
+app_mensaje_crear:
+  path: /api/mensaje/crear
+  methods: POST
+  controller: App\Controller\MensajeController::enviar
+
+app_mensaje:listar:
+  path: /api/listar/poreceptor
+  methods: GET
+  controller: App\Controller\MensajeController::listarPorReceptor
+
+app_publicacion_listarreceptor:
+  path: /api/mensaje/listar/poreceptor
+  methods: GET
+  controller: App\Controller\MensajeController::listarPorReceptor
+
+app_mensaje_borrar:
+  path: /api/mensaje/delete
+  methods: GET
+  controller: App\Controller\MensajeController::eliminar
+
+app_publicacion_crear:
+  path: /api/publicacion/crear
+  methods: POST
+  controller: App\Controller\PublicacionController::crear
+
+app_publicacion_eliminar:
+  path: /api/publicacion/eliminar
+  methods: GET
+  controller: App\Controller\PublicacionController::eliminar
+
+app_publicacion_votar:
+  path: /api/publicacion/votar
+  methods: POST
+  controller: App\Controller\PublicacionController::votar
+
+app_comentarios_crear:
+  path: /api/comentarios/crear
+  methods: POST
+  controller: App\Controller\ComentarioController::crearC
+
+app_comentarios_eliminar:
+  path: /api/comentario/delete
+  methods: DELETE
+  controller: App\Controller\ComentarioController::eliminarC
+
+
+app_comentario_porP:
+  path:  /api/comentario/listar/porP
+  methods: GET
+  controller: App\Controller\ComentarioController::listarPorP
+
+
+app_follow_seguir:
+  path: /api/follow/seguir
+  methods: POST
+  controller: App\Controller\FollowController::seguir
+
+app_follow_unfollow:
+  path: /api/follow/unfollow
+  methods: POST
+  controller: App\Controller\FollowController::unfollow
+
+app_follow_check:
+  path: /api/follow/check
+  methods: GET
+  controller: App\Controller\FollowController::chequear
+
+app_follow_seguidores:
+  path: /api/follow/seguidores
+  methods: GET
+  controller: App\Controller\FollowController::seguidores
+
+app_follow_seguidos:
+  path: /api/follow/seguidos
+  methods: GET
+  controller: App\Controller\FollowController::seguidos
+
+app_comunidad_crear:
+  path: /api/comunidad/crear
+  methods: POST
+  controller: App\Controller\ComunidadController::crear
+
+app_comunidad_eliminar:
+  path: /api/comunidad/eliminar
+  methods: POST
+  controller: App\Controller\ComunidadController::eliminar
+
+app_comunidad_listar:
+  path: /api/comunidad/listar
+  methods: GET
+  controller: App\Controller\ComunidadController::listar
+
+app_comunidad_buscarComunidad:
+  path: /api/comunidad
+  methods: GET
+  controller: App\Controller\ComunidadController::buscarComunidad
+
+app_etiqueta_crear:
+  path: /api/etiqueta/crear
+  methods: POST
+  controller: App\Controller\TagsController::crear
+
+app_etiqueta_listar:
+  path: /api/publicacion/listartags
+  methods: POST
+  controller: App\Controller\TagsController::listarTags
+
+app_etiqueta_eliminar:
+  path: /api/etiqueta/eliminar
+  methods: POST
+  controller: App\Controller\TagsController::eliminar
+
+app_tag_agregar:
+  path: /api/publicacion/agregarE
+  methods: POST
+  controller: App\Controller\TagsController::agregarEtiquetas
+
+app_tags_publicacion:
+  path: /api/tags/publicacion
+  methods: GET
+  controller: App\Controller\TagsController::tagsPublicacion
+
+app_publicacion_listar:
+  path: /api/publicacion/listar
+  methods: GET
+  controller: App\Controller\PublicacionController::listar
+
+app_publicacion_listarPopulares:
+  path: /api/publicacion/listar/populares
+  methods: GET
+  controller: App\Controller\PublicacionController::listarPopulares
+
+app_publicacion_listarUsuario:
+  path: /api/publicacion/listar/usuario
+  methods: GET
+  controller: App\Controller\PublicacionController::listarUsuario
+
+
+app_publicacion_listarComunidad:
+  path: /api/publicacion/listar/comunidad
+  methods: GET
+  controller: App\Controller\PublicacionController::listarComunidad
+
+app.swagger_ui:
+  path: /api/doc
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+app.swagger:
+  path: /api/doc.json
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger }
+
+
+
